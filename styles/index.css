@@ -3,6 +3,13 @@ body{
   padding: 0;
   background-color: #f9f9f9;
 }
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
 @font-face {
 font-family: Journey to thailand;
 src: url('../fonts/Journey to Thailand.ttf');
@@ -28,8 +35,8 @@ src: url('../fonts/Journey to Thailand.ttf');
   height: 64px;
   width: 64px;
   position: absolute;
-  top: 30%;
-  left:16px;
+  bottom: 61.8vh;
+  left:8px;
   background-image: url('../images/icons/clover.png');
   background-size: 70%;
   background-position: center;
@@ -39,6 +46,8 @@ src: url('../fonts/Journey to Thailand.ttf');
 .home-main{
   width:100%;
   height: 61.8vh;
+  position: relative;
+  margin-bottom: 0;
 }
 .home-main h1{
   color:#454545;
@@ -91,6 +100,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   font-size: 1.2rem !important;
   font-family: monospace;
   width: 80%;
+  user-select: none;
   right:0;
   left:0;
   margin: 0 auto;
@@ -145,7 +155,9 @@ src: url('../fonts/Journey to Thailand.ttf');
 .photos-section{
   box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.1);
   z-index: 3;
-  position: relative;
+  position: absolute;
+  margin-top: 0;
+  top:100vh;
   width: 100%;
 }
 .photos-section figure{
