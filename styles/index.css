@@ -5,7 +5,7 @@ body{
 }
 @font-face {
 font-family: Journey to thailand;
-src: url(../fonts/Journey to Thailand.ttf);
+src: url('../fonts/Journey to Thailand.ttf');
 }
 .particles-container{
   height:50vh;
