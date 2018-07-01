@@ -8,7 +8,7 @@ font-family: Journey to thailand;
 src: url('../fonts/Journey to Thailand.ttf');
 }
 .particles-container{
-  height:50vh;
+  height:38.2vh;
   width:100vw;
   overflow: hidden;
   clip-path:polygon(0% 0%,100% 0%, 100% 100%,0% 61.8%);
@@ -17,7 +17,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   height: 100%;
   width: 100%;
   transform:scale(1.1);
-  background: linear-gradient(105deg,#21D4FD,#B721FF);
+  background: linear-gradient(-100deg,#21D4FD,#B721FF);
   filter: blur(5px);
 }
 
@@ -25,7 +25,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   height: 64px;
   width: 64px;
   position: absolute;
-  bottom: 50%;
+  bottom: 61.8%;
   left:16px;
   background-image: url('../images/icons/clover.png');
   background-size: 70%;
@@ -34,7 +34,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   filter: saturate(1.2) contrast(1.2);
 }
 .home-main{
-  height:50vh;
+  height:61.8vh;
   width:100%;
 }
 .home-main h1{
@@ -46,6 +46,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   user-select: none;
   opacity: 1;
   padding-right: 0px;
+  margin: 0;
   animation: title-anim 0.95s ease-out;
 }
 @keyframes title-anim{
@@ -61,12 +62,12 @@ src: url('../fonts/Journey to Thailand.ttf');
   text-align: center;
   user-select: none;
   position: relative;
-  top:-10%;
   letter-spacing: 1em;
   text-transform: uppercase;
   padding-top: 0.8rem;
   color:#909090;
   opacity: 1;
+  margin: 0;
   text-rendering: optimizeLegibility;
   animation: subtitle-anim 0.7s ease-out;
 }
@@ -80,34 +81,45 @@ src: url('../fonts/Journey to Thailand.ttf');
   display: block;
   padding-top: 4px;
 }
-.home-main h2::before{
-  content: '';
-  height:1px;
-  width:0px;
-  top:-2px;
-  margin-left:0%;
-  opacity: 0;
-  position: absolute;
-  background-color: #454545;
-  animation: subtitle-line-anim 1.2s ease;
+.photos-section{
+  z-index: 1;
 }
-@keyframes subtitle-line-anim {
-    0%{
-      width: 0px;
-      margin-left:0%;
-      opacity: 1;
-    }
-    50%{
-      width:50px;
-      margin-left:35%;
-      opacity: 0;
-    }
-    100%{
-      width:50px;
-      margin-left:35%;
-      opacity: 0;
-    }
+.photos-section figure{
+  margin-bottom: 0;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+.photos-section img{
+  height:auto;
+  width: 100%;
+  max-width: 100%;
+  filter: blur(5px);
+  transform: scale(1.1);
+  transition: all 0.25s ease-out;
+}
+.photos-section figure:hover img{
+  filter: blur(0px);
+}
 
+.photos-section figcaption{
+  position: absolute;
+  top:0%;
+  right: 0%;
+}
+.photos-section figcaption button{
+  border:none;
+  background: transparent;
+  color:#fff;
+  padding: 8px 8px;
+  outline: none;
+  cursor:pointer;
+  opacity: 0;
+  transition: all 0.25s ease-out;
+}
+.photos-section figure:hover figcaption button{
+  opacity: 1;
 }
 
 /*desktop*/
@@ -115,7 +127,7 @@ src: url('../fonts/Journey to Thailand.ttf');
 @media (min-width:768px) {
   .particles-container{
     height:100vh;
-    width: 50vw;
+    width: 38.2vw;
     clip-path:polygon(0% 0%,100% 0%,61.8% 100%,0% 100%);
   }
 }
