@@ -1,0 +1,117 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.particles-container{
+  height:50vh;
+  width:100vw;
+  overflow: hidden;
+  clip-path:polygon(0% 0%,100% 0%, 100% 100%,0% 61.8%);
+}
+#particles-js{
+  height: 100%;
+  width: 100%;
+  transform:scale(1.1);
+  background: linear-gradient(105deg,#21D4FD,#B721FF);
+  filter: blur(5px);
+}
+
+.clover{
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  bottom: 50%;
+  left:16px;
+  background-image: url('../images/icons/clover.png');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(1.2) contrast(1.2);
+}
+.home-main{
+  height:50vh;
+  width:100%;
+}
+.home-main h1{
+  color:#454545;
+  font-size: 3rem;
+  font-family: Journey to thailand;
+  font-weight: 500;
+  text-align: center;
+  user-select: none;
+  opacity: 1;
+  padding-right: 0px;
+  animation: title-anim 0.95s ease-out;
+}
+@keyframes title-anim{
+    0%{
+      opacity: 0;
+    }
+}
+
+.home-main h2{
+  font-size: 1.1rem;
+  font-family: monospace;
+  font-weight: 800;
+  text-align: center;
+  user-select: none;
+  position: relative;
+  top:-10%;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  padding-top: 0.8rem;
+  color:#909090;
+  opacity: 1;
+  text-rendering: optimizeLegibility;
+  animation: subtitle-anim 0.7s ease-out;
+}
+@keyframes subtitle-anim{
+  0%{
+    opacity: 0;
+    letter-spacing: 1.25em;
+  }
+}
+.home-main h2 span{
+  display: block;
+  padding-top: 4px;
+}
+.home-main h2::before{
+  content: '';
+  height:1px;
+  width:0px;
+  top:-2px;
+  margin-left:0%;
+  opacity: 0;
+  position: absolute;
+  background-color: #454545;
+  animation: subtitle-line-anim 1.2s ease;
+}
+@keyframes subtitle-line-anim {
+    0%{
+      width: 0px;
+      margin-left:0%;
+      opacity: 1;
+    }
+    50%{
+      width:50px;
+      margin-left:35%;
+      opacity: 0;
+    }
+    100%{
+      width:50px;
+      margin-left:35%;
+      opacity: 0;
+    }
+
+}
+
+/*desktop*/
+
+@media (min-width:768px) {
+  .particles-container{
+    height:100vh;
+    width: 50vw;
+    clip-path:polygon(0% 0%,100% 0%,61.8% 100%,0% 100%);
+  }
+}
