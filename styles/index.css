@@ -94,6 +94,39 @@ src: url('../fonts/Journey to Thailand.ttf');
   display: block;
   padding-top: 4px;
 }
+.contact-btn{
+  border: none;
+  color:#fff;
+  font-size: 1.05em;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Roboto',sans-serif;
+  border-radius:50px;
+  text-rendering: optimizeLegibility;
+  background-image: linear-gradient(-100deg,#21D4FD,#B721FF);
+  background-size: 400% 100%;
+  background-position: 0% 100%;
+  box-shadow: 0 16px 48px 1px rgba(20,20,200,0.15);
+  outline: none;
+  margin-top: 4rem;
+  margin-left:50%;
+  transform: translateX(-50%);
+  transition: all 0.25s ease-out;
+  animation: contact-btn-bg-anim 10s ease-in-out alternate infinite;
+}
+@keyframes contact-btn-bg-anim{
+  0%{
+    background-position: 0% 100%;
+  }
+  100%{
+    background-position: 100% 100%;
+  }
+}
+.home-main button:hover{
+  box-shadow: 0 8px 28px 0px rgba(20,20,200,0.35);
+}
 
 .tap-to-focus{
   background-color: #f3f3f3;
@@ -156,8 +189,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.1);
   z-index: 3;
   position: absolute;
-  margin-top: 0;
-  top:100vh;
+  top:100%;
   width: 100%;
 }
 .photos-section figure{
