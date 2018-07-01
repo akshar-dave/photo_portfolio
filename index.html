@@ -13,16 +13,49 @@
 
   <script>
   $(document).ready(function(){
+
     $(".tap-to-focus").click(function(){
       $('html, body').animate({
           scrollTop: $(".photos-section").offset().top-64
       }, 750);
+    });
+    $(".contact-btn").click(function(){
+      $(".contact-box").fadeIn();
+    });
+    $(".contact-box").click(function(){
+      $(".contact-box").fadeOut(250);
     });
 });
 
   </script>
 
   <body>
+    <div class="contact-box">
+      <ul class="social-links">
+        <li>instagram</li>
+        <li>twitter</li>
+        <li>facebook</li>
+        <li>snapchat</li>
+        <li>youtube</li>
+        <li>whatsapp</li>
+        <li>skype</li>
+        <li>linkedin</li>
+        <li>github</li>
+        <li>soundcloud</li>
+      </ul>
+
+        <ul>
+          <li>phone</li>
+          <li>email</li>
+        </ul>
+
+        <ul>
+          <li>unsplash</li>
+          <li>eyeem</li>
+          <li>pexels</li>
+      </ul>
+    </div>
+
     <div class="particles-container"><div id="particles-js"></div></div>
     <script src="./scripts/particles.js"></script>
     <script src="./scripts/app.js"></script>

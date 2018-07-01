@@ -105,16 +105,17 @@ src: url('../fonts/Journey to Thailand.ttf');
   font-family: 'Roboto',sans-serif;
   border-radius:100px;
   text-rendering: optimizeLegibility;
-  background-image: linear-gradient(-100deg,#21D4FD,#B721FF);
+  background-image: linear-gradient(100deg,#21D4FD,#B721FF);
   background-size: 400% 100%;
   background-position: 0% 100%;
   box-shadow: 0 16px 48px 1px rgba(20,20,200,0.15);
   outline: none;
   margin-top: 4rem;
   margin-left:50%;
+  user-select: none;
   transform: translateX(-50%);
   transition: all 0.25s ease-out;
-  animation: contact-btn-bg-anim 10s ease-in-out alternate infinite;
+  animation: contact-btn-bg-anim 5s ease-in-out alternate infinite;
 }
 @keyframes contact-btn-bg-anim{
   0%{
@@ -127,7 +128,38 @@ src: url('../fonts/Journey to Thailand.ttf');
 .home-main button:hover{
   box-shadow: 0 8px 28px 0px rgba(20,20,200,0.35);
 }
-
+.contact-box{
+  height:100vh;
+  width:100vw;
+  position: fixed;
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+  z-index: 100;
+  background-color: #f9f9f9;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: none;
+}
+.contact-box ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+.contact-box li{
+  color:#212121;
+  text-align: center;
+  z-index: 125;
+  font-size: 1.2rem;
+}
+.social-links{
+  width: 75%;
+}
+.social-links li{
+  padding: 8px 16px;
+  display: inline-block;
+}
 .tap-to-focus{
   background-color: #f3f3f3;
   color:#707070;
