@@ -17,7 +17,10 @@ src: url('../fonts/Journey to Thailand.ttf');
   height: 100%;
   width: 100%;
   transform:scale(1.1);
-  background: linear-gradient(-100deg,#21D4FD,#B721FF);
+  background-image: linear-gradient(-100deg,#21D4FD,#B721FF);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: blur(5px);
 }
 
@@ -25,7 +28,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   height: 64px;
   width: 64px;
   position: absolute;
-  bottom: 61.8%;
+  top: 30%;
   left:16px;
   background-image: url('../images/icons/clover.png');
   background-size: 70%;
@@ -81,32 +84,92 @@ src: url('../fonts/Journey to Thailand.ttf');
   display: block;
   padding-top: 4px;
 }
+
+.tap-to-focus{
+  position: absolute;
+  background-color: #f1f1f1;
+  color:#707070;
+  font-size: 1.2rem !important;
+  font-family: monospace;
+  width: 80%;
+  right:0;
+  left:0;
+  margin: 0 auto;
+  text-align: center;
+  border-radius:5px 5px 0px 0px;
+  z-index: -1;
+  bottom: 0%;
+  overflow: hidden;
+  padding: 8px 16px;
+  animation: tap-to-focus-entry 1.5s ease-in-out;
+}
+.tap-to-focus span{
+  font-size: 1rem;
+}
+@keyframes tap-to-focus-entry{
+  0%{
+    bottom:-10%;
+  }
+  100%{
+    bottom: 0%;
+  }
+}
+.camera-icon{
+  float:left;
+}
+.arrow-down{
+  position: absolute;
+  float:right;
+  right:16px;
+  margin-top:0%;
+  animation: arrow-down-anim 1s ease-out 3 0.25s;
+}
+@keyframes arrow-down-anim{
+  0%{
+  opacity: 0;
+  margin-top:-10%;
+  transform: scale(0);
+  }
+  50%{
+  opacity: 1;
+  margin-top:0%;
+  transform: scale(1);
+  }
+  100%{
+  opacity: 0;
+  margin-top:10%;
+  transform: scale(0);
+  }
+}
 .photos-section{
+  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.1);
   z-index: 1;
 }
 .photos-section figure{
   margin-bottom: 0;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   background-color: #fff;
   overflow: hidden;
 }
 .photos-section img{
   height:auto;
   width: 100%;
+  min-height:64px;
   max-width: 100%;
-  filter: blur(5px);
+  filter: blur(3.5px);
   transform: scale(1.1);
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-in-out;
 }
 .photos-section figure:hover img{
   filter: blur(0px);
 }
 
 .photos-section figcaption{
+  height: 100%;
+  width: 100%;
   position: absolute;
   top:0%;
-  right: 0%;
 }
 .photos-section figcaption button{
   border:none;
@@ -116,11 +179,60 @@ src: url('../fonts/Journey to Thailand.ttf');
   outline: none;
   cursor:pointer;
   opacity: 0;
+  bottom:0%;
+  right: 0%;
+  text-shadow: 0 0 100px rgba(0,0,0,1);
+  position: absolute;
   transition: all 0.25s ease-out;
 }
 .photos-section figure:hover figcaption button{
   opacity: 1;
 }
+.photos-section figcaption div{
+  opacity: 1;
+  transition: all 0.25s;
+}
+.photos-section figcaption h3,h4{
+  color:#fff;
+  position: absolute;
+  transition: all 0.25s ease-out;
+  margin: 0;
+  padding: 16px;
+  z-index: 1;
+  text-shadow: 0 0 25px rgba(0,0,0,0.65);
+}
+.photos-section figcaption h3{
+  top:0%;
+  max-width: 50%;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Oxygen',sans-serif;
+}
+.photos-section figcaption div{
+  top:0%;
+  height:100%;
+  width:100%;
+  background-image: linear-gradient(0deg,#21D4FD,#B721FF);
+  opacity: 0.2;
+}
+.photos-section figcaption h4{
+  bottom:0%;
+  max-width: 80%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Oxygen',sans-serif;
+}
+.photos-section figure:hover figcaption div{
+  opacity: 0;
+}
+.photos-section figure:hover figcaption h3{
+  opacity: 0;
+}
+.photos-section figure:hover figcaption h4{
+  opacity: 0;
+}
+
+
 
 /*desktop*/
 
