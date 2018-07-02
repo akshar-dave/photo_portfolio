@@ -6,6 +6,8 @@
     <title>Blessings!</title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen|Roboto" rel="stylesheet">
     <script src="./scripts/jquery.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
@@ -20,40 +22,26 @@
       }, 750);
     });
     $(".contact-btn").click(function(){
-      $(".contact-box").fadeIn();
+      $(".contact-box").fadeIn(350);
     });
-    $(".contact-box").click(function(){
-      $(".contact-box").fadeOut(250);
+    $(".contact-box-close").click(function(){
+      $(".contact-box").fadeOut(200);
     });
+
 });
 
   </script>
 
   <body>
     <div class="contact-box">
+      <div>Hey! I'd be glad to hear from you.</div>
       <ul class="social-links">
-        <li>instagram</li>
-        <li>twitter</li>
-        <li>facebook</li>
-        <li>snapchat</li>
-        <li>youtube</li>
-        <li>whatsapp</li>
-        <li>skype</li>
-        <li>linkedin</li>
-        <li>github</li>
-        <li>soundcloud</li>
+        <li><a class="instagram-link" href="https://www.instagram.com/_.akshu_"></a></li>
+        <li><a class="facebook-link" href="https://www.facebook.com/fakeakshar"></a></li>
+        <li><a class="twitter-link" href="https://www.twitter.com/akshar_dave"></a></li>
+        <li><a class="whatsapp-link" href="https://wa.me/917600142822"></a></li>
       </ul>
-
-        <ul>
-          <li>phone</li>
-          <li>email</li>
-        </ul>
-
-        <ul>
-          <li>unsplash</li>
-          <li>eyeem</li>
-          <li>pexels</li>
-      </ul>
+      <button type="button" class="contact-box-close" name="button"><</button>
     </div>
 
     <div class="particles-container"><div id="particles-js"></div></div>

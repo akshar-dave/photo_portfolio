@@ -114,6 +114,7 @@ src: url('../fonts/Journey to Thailand.ttf');
   margin-left:50%;
   user-select: none;
   transform: translateX(-50%);
+  cursor: pointer;
   transition: all 0.25s ease-out;
   animation: contact-btn-bg-anim 5s ease-in-out alternate infinite;
 }
@@ -129,36 +130,75 @@ src: url('../fonts/Journey to Thailand.ttf');
   box-shadow: 0 8px 28px 0px rgba(20,20,200,0.35);
 }
 .contact-box{
-  height:100vh;
+  height:100%;
   width:100vw;
   position: fixed;
-  top:0%;
-  bottom:0%;
-  left:0%;
-  right:0%;
   z-index: 100;
   background-color: #f9f9f9;
   padding-top: 32px;
   padding-bottom: 32px;
   display: none;
 }
-.contact-box ul{
-  margin:0;
-  padding: 0;
-  list-style: none;
-}
-.contact-box li{
-  color:#212121;
+.contact-box div{
+  user-select: none;
+  color:#454545;
   text-align: center;
-  z-index: 125;
-  font-size: 1.2rem;
+  margin-top: 0;
+  padding: 32px;
+  font-size: 24px;
+  font-family: Oxygen,sans-serif;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
 }
 .social-links{
-  width: 75%;
+  list-style:none;
+  position: absolute;
+  left:0;
+  right:0;
+  text-align: center;
+  padding: 0;
 }
 .social-links li{
-  padding: 8px 16px;
   display: inline-block;
+}
+.social-links a{
+  display: block;
+  height:32px;
+  width:32px;
+  margin: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  user-select: none;
+}
+.instagram-link{
+  background-image: url('../images/icons/instagram.svg');
+}
+.facebook-link{
+  background-image: url('../images/icons/facebook.svg');
+}
+.twitter-link{
+  background-image: url('../images/icons/twitter.svg');
+}
+.whatsapp-link{
+  background-image: url('../images/icons/whatsapp.svg');
+}
+.contact-box-close{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 16px;
+  background-color: #f9f9f9;
+  text-align: center;
+  color:#a9a9a9;
+  font-family: monospace;
+  user-select: none;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  position: absolute;
+  top:0;
+  left:0%;
 }
 .tap-to-focus{
   background-color: #f3f3f3;
