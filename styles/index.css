@@ -361,4 +361,27 @@ src: url('../fonts/Journey to Thailand.ttf');
     width: 38.2vw;
     clip-path:polygon(0% 0%,100% 0%,61.8% 100%,0% 100%);
   }
+  .home-main h1{
+    font-size: 4rem;
+  }
+  .home-main h2{
+    font-size: 1.15rem;
+  }
+  .contact-btn{
+    position: relative;
+  }
+  .clover{
+    left:50%;
+    transform: translateX(-50%);
+    margin-bottom: 32px;
+  }
+  .tap-to-focus{
+    display: none;
+  }
+  .photos-section figure{
+    float: left;
+    max-width: 33.3334%;
+    max-height: 45vh;
+    margin: 0;
+  }
 }
